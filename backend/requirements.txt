@@ -1,0 +1,23 @@
+# Core service
+fastapi==0.142.2
+uvicorn==0.54.0
+pydantic==2.13.5
+python-dotenv==1.2.4
+
+# Database
+neo4j==6.4.0
+
+# Graph algorithms (validation, traversal, cycle detection, topological sort)
+networkx==3.7
+
+# Integer Linear Programming (ILP solver). Falls back to scipy.optimize.milp
+# when no PuLP solver binary is present on the machine.
+pulp==4.0.0
+
+# HiGHS-backed MILP fallback + numpy
+scipy==1.18.1
+numpy==2.5.3
+highspy==1.15.1
+
+# Test client for scripts/verify_api.py (required by starlette's TestClient)
+httpx2

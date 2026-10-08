@@ -1,0 +1,97 @@
+# ============================================================
+#  Python
+# ============================================================
+
+# Virtual environment (NEVER commit - ~200MB of binaries)
+test/
+.venv/
+venv/
+env/
+ENV/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# ============================================================
+#  Secrets  (these MUST stay local)
+# ============================================================
+
+# Real config holds NEO4J_PASSWORD
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Ship the template instead
+!.env.example
+
+# ============================================================
+#  Node / Next.js
+# ============================================================
+
+node_modules/
+.next/
+out/
+build/
+.turbo/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================================
+#  Logs & runtime output
+# ============================================================
+
+*.log
+npm-debug.log*
+yarn-error.log*
+logs/
+*.pid
+*.seed
+
+# Test / verification artefacts
+.coverage
+coverage/
+htmlcov/
+report.json
+
+# Local scratch
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
+# ============================================================
+#  OS / editor
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+.vscode/
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# ============================================================
+#  Neo4j data dumps (regenerate with scripts/seed_physics.py)
+# ============================================================
+
+*.dump
+neo4j/data/
+neo4j/logs/
+neo4j/transactions/
